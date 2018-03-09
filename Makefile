@@ -123,6 +123,10 @@ detect_changed_source_translations:
 
 validate_translations: fake_translations detect_changed_source_translations
 
+# Check if translations are valid
+test_translations:
+	cd ecommerce && i18n_tool validate
+
 # Targets in a Makefile which do not produce an output file with the same name as the target name
 .PHONY: help requirements migrate serve clean validate_python quality validate_js validate html_coverage e2e \
 	extract_translations dummy_translations compile_translations fake_translations pull_translations \
